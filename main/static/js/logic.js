@@ -6,7 +6,7 @@ d3.json(url).then((data) => console.log(data.features.length));
 
 // A function to determine the marker size based on the magnitude
 function markerSize(mag) {
-    return Math.sqrt(mag*1000) *2000  ;
+    return Math.sqrt(mag*1000) *2000;
   }
 
 
@@ -36,10 +36,8 @@ d3.json(url).then((data)=>{
                     fillColor: "yellow",
                     radius: markerSize(magnitude)
                 }
-            ).bindPopup(`<h3>Location: ${place}</h3><h3>Magnitude: ${magnitude}</h3><h3>Time: ${date.toLocaleString()}</h3>`)
+            ).bindPopup(`<h3>Location: ${place}</h3><hr><p>Magnitude: ${magnitude}</p><p>Time: ${date}</p>`)
         );
-        
-        console.log(coordinates)
     }
 
     //Create Layer group for 
@@ -47,8 +45,8 @@ d3.json(url).then((data)=>{
 
     //Create map object
     let myMap = L.map("map", {
-        center: [40, -95],
-        zoom: 4,
+        center: [30, -0],
+        zoom: 3,
         layers: markers
     });
 
