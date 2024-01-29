@@ -40,7 +40,7 @@ d3.json(url).then((data)=>{
     //Create map object
     let myMap = L.map("map", {
         center: [30, -0],
-        zoom: 3,
+        zoom: 2,
         layers: markers
     });
 
@@ -63,10 +63,10 @@ function markerSize(mag) {
 // Define a function to get color based on depth
 function getColor(quake_depth) {
     return quake_depth > 89 ? '#FE5F65' :
-           quake_depth > 69 ? '#FE5F65' :
-           quake_depth > 9 ? '#DBF402' :
+           quake_depth > 69 ? '#FCA25D' :
            quake_depth > 49 ? '#FDB72A' :
            quake_depth > 29 ? '#F7DB11' :
+           quake_depth > 9 ? '#DBF402' :
                           '#A3F500';
   }
 
